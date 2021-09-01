@@ -8,6 +8,6 @@
   <li>Output the username property via String Interpolation (in a paragraph below the input)</li>
   <p>{{username}}</p>
   <li>Add a button which may only be clicked if the username is NOT an empty string</li>
-  <button [disabled]='{{username}} = ""' (click)='username = ""'>Clear User</button>
+  <button [disabled]='!username' (click)='clearUsername()'>Clear User</button>
   <li>Upon clicking the button, the username should be reset to an empty string</li>
 </ol>
