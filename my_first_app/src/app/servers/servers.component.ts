@@ -10,9 +10,12 @@ import { Event } from '@angular/router';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
+
   allowNewServer = false;
   serverCreationStatus = "No server was created!";
   serverName = 'Test Server';
+  serverCreated = false;
+
   constructor(){
     setTimeout(()=> { this.allowNewServer = true}
     ,1000)
@@ -22,6 +25,7 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer(){
+    this.serverCreated = true;
     this.serverCreationStatus = 'Server was created! The name is: ' + this.serverName;
   }
 
